@@ -31,11 +31,11 @@ with warnings.catch_warnings():
     # Suppress TF and Keras warnings when importing
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
     warnings.simplefilter("ignore")
-    import tensorflow as tf
+    import tensorflow-cpu as tf
 
     tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
     with redirect_stderr(open(os.devnull, "w")):
-        from tensorflow import keras
+        from tensorflow-cpu import keras
 
 
 import birdvoxdetect
